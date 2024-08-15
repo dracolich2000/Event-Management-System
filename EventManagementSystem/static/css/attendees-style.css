@@ -1,0 +1,188 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #333333;
+}
+
+/* Container for the entire page */
+.attendees-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header styles */
+.main-header {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-nav ul li {
+    margin-left: 30px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Main content area */
+.main-content {
+    padding: 40px;
+    background-color: #333333;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Search and filter section */
+.search-filter {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+#search-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+#event-filter {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Attendees list table */
+.attendees-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.attendees-table thead {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+.attendees-table th,
+.attendees-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.attendees-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.attendees-table tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* footer*/
+footer {
+    background: #444444;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+footer nav ul li a {
+    color: #77aaff;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}

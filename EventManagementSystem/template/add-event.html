@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="/static/css/add-event-style.css">
+</head>
+<body>
+    <div class="add-event-container">
+        <!-- Header Section -->
+        <header class="main-header">
+            <h1>Add Event</h1>
+        </header>
+
+        <!-- Back Button -->
+        <div class="back-button-container">
+            <a href="{% url 'events' %}" class="btn-back">Back</a>
+        </div>
+        
+        <!-- Main Content with Form -->
+        <main class="main-content">
+            <form class="add-event-form" method="post" enctype="multipart/form-data">
+                <!-- Success and Error Messages -->
+                <div class="success" id="success-message">
+                    {% if success %}
+                        {{ success }}
+                    {% endif %}            
+                </div>
+                <div class="error" id="error-message">
+                    {% if error %}
+                        {{ error }}
+                    {% endif %}
+                </div>
+                {% csrf_token %}
+                <h2>Add New Event</h2>
+                
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" name="event-name" placeholder="Enter event name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-date">Date</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-location">Location</label>
+                    <input type="text" id="event-location" name="event-location" placeholder="Enter event location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-description">Description</label>
+                    <textarea id="event-description" name="event-description" rows="5" placeholder="Enter event description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-image">Event Image</label>
+                    <input type="file" id="event-image" name="event-image" accept="image/*">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Add Event</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 AtharvaDeolankar. All rights reserved.</p>
+                <nav>
+                    <ul>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="/static/js/add-event-script.js"></script>
+</body>
+</html>

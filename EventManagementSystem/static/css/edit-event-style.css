@@ -1,0 +1,146 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #333333;
+}
+
+/* Container for the entire page */
+.edit-event-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header styles */
+.main-header {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Back Button styles */
+.back-button-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 40px;
+    background-color: #333333;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
+
+/* Main content area */
+.main-content {
+    margin-top: 20px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Form styles */
+.edit-event-form .form-group {
+    margin-bottom: 20px;
+}
+
+.edit-event-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.edit-event-form input[type="text"],
+.edit-event-form input[type="date"],
+.edit-event-form input[type="file"],
+.edit-event-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.edit-event-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+}
+
+/* footer*/
+footer {
+    background: #444444;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+footer nav ul li a {
+    color: #77aaff;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}

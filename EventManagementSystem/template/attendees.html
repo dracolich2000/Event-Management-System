@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendees Management</title>
+    <link rel="stylesheet" href="/static/css/attendees-style.css">
+</head>
+<body>
+    <div class="attendees-container">
+        <header class="main-header">
+            <h1>Attendees</h1>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="{% url 'dashboard' %}">Home</a></li>
+                    <li><a href="{% url 'overview' %}">Overview</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'ticket_sales' %}">Ticket Sales</a></li>
+                    <li><a href="{% url 'settings' %}">Settings</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-content">
+            <section class="search-filter">
+                <input type="text" id="search-bar" placeholder="Search attendees...">
+                <button id="search-button">Search</button>
+                <select id="event-filter">
+                    <option value="">All Events</option>
+                    <option value="Tech Conference 2024">Tech Conference 2024</option>
+                    <option value="Art Expo 2024">Art Expo 2024</option>
+                    <option value="Web Development Bootcamp">Web Development Bootcamp</option>
+                    <option value="Music Festival 2024">Music Festival 2024</option>
+                </select>
+            </section>
+            
+            <section class="attendees-list">
+                <table class="attendees-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Event</th>
+                            <th>Ticket Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@example.com</td>
+                            <td>Tech Conference 2024</td>
+                            <td>VIP</td>
+                            <td>
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>john.smith@example.com</td>
+                            <td>Art Expo 2024</td>
+                            <td>Standard</td>
+                            <td>
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Emily Johnson</td>
+                            <td>emily.johnson@example.com</td>
+                            <td>Web Development Bootcamp</td>
+                            <td>Standard</td>
+                            <td>
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AtharvaDeolankar. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

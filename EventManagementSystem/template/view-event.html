@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Event</title>
+    <link rel="stylesheet" href="/static/css/view-event-style.css">
+</head>
+<body>
+    <div class="view-event-container">
+        <header class="main-header">
+            <h1>View Event</h1>
+        </header>
+        
+        <div class="back-button-container">
+            <a href="{% url 'events' %}" class="btn-back">Back</a>
+        </div>
+
+        <main class="main-content">
+            <div class="event-overview">
+                <h3>Event Overview</h3>
+                <div class="overview-card">
+                    <h4>Event Name</h4>
+                    <p>{{ event.event_name }}</p>
+                </div>
+                <div class="overview-card">
+                    <h4>Date</h4>
+                    <p>{{ event.date }}</p>
+                </div>
+                <div class="overview-card">
+                    <h4>Location</h4>
+                    <p>{{ event.location }}</p>
+                </div>
+                <div class="overview-card">
+                    <h4>Description</h4>
+                    <p>{{ event.description }}</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 AtharvaDeolankar. All rights reserved.</p>
+                <nav>
+                    <ul>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

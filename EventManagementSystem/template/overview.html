@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="/static/css/overview-style.css">
+</head>
+<body>
+    <div class="overview-container">
+        <header class="main-header">
+            <h1>Dashboard Overview</h1>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="{% url 'dashboard' %}">Home</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'ticket_sales' %}">Ticket Sales</a></li>
+                    <li><a href="{% url 'attendees' %}">Attendees</a></li>
+                    <li><a href="{% url 'settings' %}">Settings</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-content">
+            <section class="stats-summary">
+                <div class="stat-card">
+                    <h3>Total Events</h3>
+                    <p>{{ event_count }}</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Ticket Sales</h3>
+                    <p>$15,200</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Attendees</h3>
+                    <p>4,500</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Overall Feedback</h3>
+                    <p>98% Positive</p>
+                </div>
+            </section>
+
+            <section class="recent-activities">
+                <h2>Recent Activities</h2>
+                <div class="activity-item">
+                    <p>New event "Startup Summit 2024" added</p>
+                    <span class="activity-date">August 1, 2024</span>
+                </div>
+                <div class="activity-item">
+                    <p>Updated details for "AI Expo 2024"</p>
+                    <span class="activity-date">July 29, 2024</span>
+                </div>
+                <div class="activity-item">
+                    <p>Sold out tickets for "Music Festival 2024"</p>
+                    <span class="activity-date">July 27, 2024</span>
+                </div>
+                <div class="activity-item">
+                    <p>Added feedback survey for "Design Conference"</p>
+                    <span class="activity-date">July 25, 2024</span>
+                </div>
+                <!-- Add more activity items as needed -->
+            </section>
+
+            <section class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <div class="event-item">
+                    <h3>Tech Conference 2024</h3>
+                    <p>Date: September 12, 2024</p>
+                    <p>Location: New York City, NY</p>
+                </div>
+                <div class="event-item">
+                    <h3>Art Expo 2024</h3>
+                    <p>Date: October 5, 2024</p>
+                    <p>Location: Los Angeles, CA</p>
+                </div>
+                <div class="event-item">
+                    <h3>Web Development Bootcamp</h3>
+                    <p>Date: October 15, 2024</p>
+                    <p>Location: San Francisco, CA</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 AtharvaDeolankar. All rights reserved.</p>
+                <nav>
+                    <ul>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

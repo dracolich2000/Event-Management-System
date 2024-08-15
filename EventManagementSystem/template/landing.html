@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManageMyEvents</title>
+    <link rel="stylesheet" href="static/css/landing-style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ManageMyEvents</h1>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{% url 'login' %}" class="btn-login">Login</a></li>
+                    <li><a href="{% url 'signup' %}" class="btn-signup">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h2>Organize and Promote Your Events Effortlessly</h2>
+                <p>Manage your events, sell tickets, and analyze your performance all in one place.</p>
+                <a href="{% url 'signup' %}" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <h1>Features</h1>
+        <div class="feature-container">
+            <div class="features-grid">
+                <div class="feature">
+                    <img src="static/img/create_event.jpg" alt="Event">
+                    <h4>Create Events</h4>
+                    <p>Effortlessly create and manage events with our intuitive event creation tool. Customize your event's details, set dates, and add descriptions to provide all the necessary information to your attendees.</p>
+                </div>
+                <div class="feature">
+                    <img src="static/img/tickets.jpg" alt="Tickets">
+                    <h4>Ticketing</h4>
+                    <p>Our platform offers a seamless ticketing solution. Set up different ticket types, manage pricing, and monitor sales in real-time. Whether you need simple tickets or complex pricing structures, we've got you covered.</p>
+                </div>
+                <div class="feature">
+                    <img src="static/img/analytics.png" alt="Analytics">
+                    <h4>Analytics</h4>
+                    <p>Gain valuable insights into your events with our comprehensive analytics tools. Analyze attendance patterns, ticket sales, and more to make data-driven decisions and improve future events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h1>Pricing Plans</h1>
+        <div class="pricing-container">
+            <div class="pricing-plan">
+                <h2>Basic Plan</h2>
+                <p class="price">₹1600/month</p>
+                <ul class="features-list">
+                    <li>Event Creation</li>
+                    <li>Basic Ticketing</li>
+                    <li>RSVP Management</li>
+                    <li>Basic Analytics</li>
+                </ul>
+                <a href="{% url 'signup' %}" class="btn btn-buy">Buy</a>
+            </div>
+            
+            <div class="pricing-plan featured-plan">
+                <h2>Pro Plan</h2>
+                <p class="price">₹4000/month</p>
+                <ul class="features-list">
+                    <li>Event Creation</li>
+                    <li>Advanced Ticketing</li>
+                    <li>RSVP Management</li>
+                    <li>Advanced Analytics</li>
+                    <li>Customizable Templates</li>
+                    <li>Integration Options</li>
+                </ul>
+                <a href="{% url 'signup' %}" class="btn btn-buy">Buy</a>
+            </div>
+            
+            <div class="pricing-plan">
+                <h2>Enterprise Plan</h2>
+                <p class="price">₹8000/month</p>
+                <ul class="features-list">
+                    <li>Event Creation</li>
+                    <li>Advanced Ticketing</li>
+                    <li>RSVP Management</li>
+                    <li>Comprehensive Analytics</li>
+                    <li>Customizable Templates</li>
+                    <li>Integration Options</li>
+                    <li>Dedicated Support</li>
+                </ul>
+                <a href="{% url 'signup' %}" class="btn btn-buy">Buy</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        <div class="events-container">
+            <div class="event-card">
+                <img src="static/img/tech-event.jpg" alt="tech-event">
+                <h3>Tech Conference 2024</h3>
+                <p>Date: August 25, 2024</p>
+                <p>Location: Pune</p>
+                <p>Description: Join us for a day of insightful talks and networking with industry leaders in technology.</p>
+            </div>
+            <div class="event-card">
+                <img src="static/img/art-expo.jpg" alt="art-expo">
+                <h3>Art Expo 2024</h3>
+                <p>Date: September 10, 2024</p>
+                <p>Location: Mumbai</p>
+                <p>Description: Discover the latest trends in the art world at our annual Art Expo, featuring galleries from around the world.</p>
+            </div>
+            <div class="event-card">
+                <img src="static/img/music-fest.jpg" alt="music-fest">
+                <h3>Music Fest 2024</h3>
+                <p>Date: October 5, 2024</p>
+                <p>Location: Banglore</p>
+                <p>Description: Enjoy performances by top artists and emerging talents at the Music Fest 2024.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h1>Contact Us</h1>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you! Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.</p>
+                <ul class="contact-details">
+                    <li><strong>Email:</strong> support@ManageMyEvents.com</li>
+                    <li><strong>Phone:</strong> +91 1234567890</li>
+                    <li><strong>Address:</strong>Pune</li>
+                </ul>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AtharvaDeolankar. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="static/js/landing-script.js"></script>
+</body>
+</html>
